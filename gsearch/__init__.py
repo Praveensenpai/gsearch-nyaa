@@ -32,7 +32,7 @@ class Google:
                 description_box = result.css_first(
                     'div[style="-webkit-line-clamp:2"]'
                 ).text()
-            yield GoogleSearchResult(url, title, description_box)
+                yield GoogleSearchResult(url, title, description_box)
 
     def search(self, query: str) -> List[GoogleSearchResult]:
         url = f"{self.BASE_URL}{query}"
